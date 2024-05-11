@@ -8,6 +8,7 @@ require("aperezgdev.cmp")
 require("aperezgdev.auto-tag")
 require("aperezgdev.null-ls")
 require("aperezgdev.lualine")
+require("aperezgdev.gitsigns")
 
 -- Tema establecido
 vim.cmd[[colorscheme tokyonight]]
