@@ -44,6 +44,14 @@ return require('packer').startup(function(use)
 		"hrsh7th/nvim-cmp"
 	}
 
+	use {
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup {}
+		end
+	}
+
 	use {"windwp/nvim-ts-autotag"}
 
 	use "jose-elias-alvarez/null-ls.nvim"
@@ -56,5 +64,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'lewis6991/gitsigns.nvim'
-	
+
+	use 'andweeb/presence.nvim'
+
   end)

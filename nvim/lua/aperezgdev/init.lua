@@ -9,6 +9,7 @@ require("aperezgdev.auto-tag")
 require("aperezgdev.null-ls")
 require("aperezgdev.lualine")
 require("aperezgdev.gitsigns")
+require("aperezgdev.discord-presence")
 
 -- Tema establecido
 vim.cmd[[colorscheme tokyonight]]
