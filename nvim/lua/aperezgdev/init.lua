@@ -19,6 +19,12 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.diagnostic.config({
+    virtual_text = true,
+    update_in_insert = true,
+    underline = true,
+})
+
 -- Config para los numeros
 vim.opt.number = true
 vim.opt.relativenumber = true
