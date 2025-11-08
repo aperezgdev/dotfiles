@@ -10,7 +10,7 @@ end)
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {"gopls", "html", "jsonls", "tsserver",
+  ensure_installed = {"gopls", "html", "jsonls", "ts_ls",
   "markdown_oxide", "tailwindcss","astro"},
   handlers = {
     function(server_name)

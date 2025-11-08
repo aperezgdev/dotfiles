@@ -13,6 +13,14 @@ return require('packer').startup(function(use)
   }
 
   use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
+use {
+    "github/copilot.vim",
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+      vim.g.copilot_assume_mapped = true
+    end
+  }
 
   use {
   	'VonHeikemen/lsp-zero.nvim',
@@ -34,8 +42,6 @@ return require('packer').startup(function(use)
     	"neovim/nvim-lspconfig",
    }
 
-	use "folke/tokyonight.nvim"
-
 	use {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
@@ -54,7 +60,8 @@ return require('packer').startup(function(use)
 
 	use {"windwp/nvim-ts-autotag"}
 
-	use "jose-elias-alvarez/null-ls.nvim"
+	use "stevearc/conform.nvim"
+	use "mfussenegger/nvim-lint"
 
 	use 'nvim-tree/nvim-web-devicons'
 
@@ -70,5 +77,13 @@ return require('packer').startup(function(use)
 	use {
 		"ray-x/lsp_signature.nvim"
 	}
+	use 'sainnhe/gruvbox-material'
+	use 'akinsho/toggleterm.nvim'
 
-  end)
+use({
+    "kdheepak/lazygit.nvim",
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+})
+end)
