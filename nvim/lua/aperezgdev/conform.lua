@@ -3,6 +3,7 @@ require("conform").setup({
         go = { "gofmt", "goimports" },
         lua = { "stylua" },
         javascript = { "prettier" },
+        java = { "google-java-format" },
     },
 })
 

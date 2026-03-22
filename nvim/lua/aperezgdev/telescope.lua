@@ -1,3 +1,5 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Buscar archivos" })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Buscar por contenido" })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "Buscar buffers abiertos" })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Buscar en help tags" })
